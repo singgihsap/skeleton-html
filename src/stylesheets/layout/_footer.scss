@@ -1,0 +1,18 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+.footer {
+  background-color: $white;
+  position: absolute;
+  padding: 3rem 0;
+  bottom: 0;
+  width: 100%;
+
+  p {
+    margin: 0;
+  }
+
+  @include modifier('home') {
+    background-color: transparent;
+  }
+}

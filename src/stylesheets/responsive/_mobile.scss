@@ -1,0 +1,74 @@
+/*----------------------- */
+/*START: 360px */
+/*----------------------- */
+@media (min-width: 360px) and (max-width: 767px) {
+  /*----- RESPONSIVE UTILITIES ----- */
+  .hidden-mobile {
+    display: none !important;
+  }
+
+  .visible-mobile {
+    visibility: visible !important;
+  }
+
+  .visible-desktop {
+    display: none !important;
+  }
+
+  /*----- GENERAL ----- */
+  .table-responsive {
+    border: none;
+  }
+
+  /*----- HEADER ----- */
+  .navbar {
+    .btn--transparent {
+      color: $text-color;
+    }
+
+    .navbar-brand {
+      margin-top: .5rem;
+    }
+
+    .navbar-right--admin {
+      margin-left: 5rem;
+
+      .dropdown {
+        text-align: right;
+
+        .dropdown-menu {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  /*----- SECTION ----- */
+  section.home {
+    background-position: 70% 0;
+
+    .intro {
+      margin-top: 40%;
+
+      h1 {
+        font-size: 4.4rem;
+      }
+
+      h3 {
+        font-size: 2.4rem;
+      }
+    }
+
+    .box {
+      margin-bottom: 0%;
+    }
+  }
+
+  .page-content {
+    @include element('block') {
+      padding: 3rem 0;
+    }
+  }
+
+  /*----- FOOTER ----- */
+}

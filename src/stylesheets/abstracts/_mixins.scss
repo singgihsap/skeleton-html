@@ -1,0 +1,128 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+/// Make a context based selector a little more friendly
+/// @author Hugo Giraudel
+/// @param {String} $context
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}
+
+/// BEM Methodology
+/// @access public
+/// @param {String} $element - Element's name
+@mixin element($element) {
+    &__#{$element} {
+        @content;
+        @mixin modifier($modifier) {
+          &--#{$modifier} {
+            @content;
+          }
+        }
+    }
+}
+/// @param {String} $modifier - Modifier's name
+@mixin modifier($modifier) {
+    &--#{$modifier} {
+        @content;
+    }
+}
+
+/// Border Radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+/// FLEXBOX
+@mixin flexbox(){
+  .display-flex {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@mixin align-self(){
+  .align-self-center {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+  }
+}
+
+@media (min-width : 760px) {
+  @include flexbox();
+}
+
+@include align-self();
+
+/// MIXINS FOR MARGINS
+@mixin offset-margin($margin, $value){
+  margin-#{$margin}: $value !important;
+}
+
+@for $i from 0 through 20 {
+  @each $margin in top, left, bottom, right {
+
+    .margin-#{$margin}-#{$i}{
+      @include offset-margin($margin, 1rem * $i)
+    }
+
+  }
+}
+
+/// MIXINS FOR PADDINGS
+@mixin offset-padding($padding, $value){
+  padding-#{$padding}: $value;
+}
+
+@for $i from 0 through 20 {
+  @each $padding in top, left, bottom, right {
+
+    .pad-#{$padding}-#{$i}{
+      @include offset-padding($padding, 1rem * $i)
+    }
+
+  }
+}
+
+// MIXIN FONTS
+@mixin fonts($fonts) {
+  font-family: $fonts, sans-serif;
+}
+
+// MIXIN TRANSITION
+@mixin transition($transition) {
+  -webkit-transition: all $transition ease-in-out;
+  -moz-transition: all $transition ease-in-out;
+  -o-transition: all $transition ease-in-out;
+  transition: all $transition ease-in-out;
+}

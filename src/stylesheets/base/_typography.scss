@@ -1,0 +1,25 @@
+body {
+  @include fonts("normal");
+  font-size: 14px;
+  color: $text-color;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+// Standard Heading and Tags Font Size, www.w3schools.com/
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.17em;
+}
+
+big {
+  font-size: 200%;
+  font-weight: 300;
+}

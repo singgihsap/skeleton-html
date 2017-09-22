@@ -1,0 +1,13 @@
+/*----------------------- */
+/*START: 992 DESKTOP */
+/*----------------------- */
+@media (min-width: 992px) {
+  /*----- RESPONSIVE UTILITIES ----- */
+  .visible-mobile {
+    display: none !important;
+  }
+
+  .visible-desktop {
+    visibility: visible !important;
+  }
+}

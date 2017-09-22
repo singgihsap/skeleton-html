@@ -1,0 +1,101 @@
+.btn {
+	font-weight: normal;
+	&-sm {
+		padding: 3px 15px;
+	}
+	@include modifier('uppercase') {
+		text-transform: uppercase;
+	}
+	@include modifier('full'){
+		width: 100%;
+	}
+	@include modifier('shadow') {
+		box-shadow: 0 12px 27px 0 rgba(158, 157, 157, 0.46);
+	}
+	@include modifier('transparent') {
+		padding: 15px 30px !important;
+		background-color: transparent;
+		letter-spacing: .1rem;
+		@include fonts('ExtraBold')
+		border: transparent;
+		color: $white;
+
+		@include on-event {
+			background-color: transparent;
+			color: $text-color;
+		}
+	}
+	@include modifier('transparent-black') {
+		padding: 15px 30px !important;
+		background-color: transparent;
+		letter-spacing: .1rem;
+		@include fonts('ExtraBold')
+		border: transparent;
+		color: $text-color;
+
+		@include on-event {
+			background-color: transparent;
+			color: $faded-orange;
+		}
+	}
+	@include modifier('gradient-lg') {
+		padding: 6px 50px;
+		background-image: linear-gradient(104deg, #fc6076, #ff9a44);
+		box-shadow: 0 12px 27px 0 rgba(158, 157, 157, 0.46);
+		@include fonts('ExtraBold');
+		border: transparent;
+		border-radius: 5rem;
+		font-size: 2.2rem;
+		height: 7rem;
+		line-height: 6rem;
+		color: $white;
+
+		@include on-event {
+			background-image: linear-gradient(250deg, #fc6076, #ff9a44);
+			color: white;
+		}
+	}
+	@include modifier('gradient') {
+		padding: 15px 35px !important;
+		background-image: linear-gradient(104deg, #fc6076, #ff9a44);
+		letter-spacing: .1rem;
+		border-radius: 5rem;
+		@include fonts('ExtraBold')
+		border: transparent;
+		color: $white;
+
+		@include on-event {
+			background-image: linear-gradient(250deg, #fc6076, #ff9a44);
+			color: white;
+		}
+	}
+	@include modifier('red') {
+		background-color: $dusty-orange;
+		letter-spacing: .1rem;
+		border-radius: 5rem;
+		@include fonts('ExtraBold')
+		border: transparent;
+		color: $white;
+
+		@include on-event {
+			background-color: lighten($dusty-orange, 6%);
+			color: white;
+		}
+	}
+	@include modifier('green') {
+		background-color: $nasty-green;
+		letter-spacing: .1rem;
+		border-radius: 5rem;
+		@include fonts('ExtraBold')
+		border: transparent;
+		color: $white;
+
+		@include on-event {
+			background-color: lighten($nasty-green, 6%);
+			color: white;
+		}
+	}
+	span {
+		margin-right: 10px;
+	}
+}

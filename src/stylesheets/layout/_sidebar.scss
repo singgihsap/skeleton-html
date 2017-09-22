@@ -1,0 +1,109 @@
+// This file contains all styles related to the sidebar of the site/application.
+.humberger {
+  z-index: 2000;
+  cursor: pointer;
+}
+.sidebar {
+  background-color: $white;
+  width: 295px;
+  height: 100vh;
+  position: fixed;
+  @include fonts('ExtraBold')
+  -webkit-box-shadow: 8px 0 13px 0 rgba(211, 211, 211, 0.5);
+  -moz-box-shadow: 8px 0 13px 0 rgba(211, 211, 211, 0.5);
+  box-shadow: 8px 0 13px 0 rgba(211, 211, 211, 0.5);
+
+  @include element('profile') {
+    position: relative;
+    padding: 5rem;
+    text-align: center;
+
+    img {
+      width: 8rem;
+      height: 8rem;
+      border-radius: 100%;
+      object-fit: cover;
+    }
+
+    .name {
+      margin-top: 2rem;
+      @include fonts('ExtraBold')
+      color: #8899a4;
+    }
+  }
+
+  @include element('menu') {
+    margin-top: 8px;
+    list-style: none;
+    padding-left: 0;
+  }
+
+  @include element('menu-list') {
+    color: #757575;
+    padding: 15px 25px;
+    display: block;
+    height: 55px;
+    line-height: 25px;
+    text-transform: uppercase;
+    border-left: 3px solid transparent;
+
+    @include on-event {
+      color: $secondary-color;
+
+      .sidebar__menu-text {
+        color: $secondary-color;
+      }
+
+      .sidebar__menu-img {
+        path,
+        circle,
+        rect {
+          stroke: $secondary-color;
+        }
+      }
+    }
+
+    &.active {
+      color: $secondary-color;
+
+      .sidebar__menu-text {
+        color: $secondary-color;
+      }
+
+      .sidebar__menu-img {
+        path,
+        circle,
+        rect {
+          stroke: $secondary-color;
+        }
+      }
+    }
+  }
+
+  @include element('menu-img') {
+    margin-right: 15px;
+    margin-left: 2rem;
+  }
+  @include element('menu-text') {
+    position: absolute;
+    font-size: 1.3rem;
+    color: $blue-grey;
+  }
+}
+
+.page-content {
+  margin-top: 50px;
+  background-color: #f1f3f6;
+  padding: 10px 25px;
+  min-height: calc(100vh - 50px);
+
+  .navbar {
+    .navbar-brand {
+      margin-left: 0rem;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+    }
+  }
+}

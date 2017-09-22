@@ -1,0 +1,24 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/awesome-bootstrap-checkbox/0.3.7/awesome-bootstrap-checkbox.min.css');
+
+.radio {
+  label {
+    &:after {
+      width: 10px;
+      height: 10px;
+      left: 5px;
+      top: 5px;
+    }
+
+    &:before {
+      width: 20px;
+      height: 20px;
+      border: 2px solid #ccc;
+    }
+  }
+}
+
+.checkbox {
+  label {
+    font-family: "normal", sans-serif !important;
+  }
+}

@@ -1,0 +1,20 @@
+.card {
+  background-color: $white;
+  padding: 3rem;
+  border-radius: .6rem;
+  margin-bottom: 3rem;
+
+  @include element('body') {
+    h1 {
+      margin: 1rem 0;
+      margin-bottom: 0;
+      font-size: 4.8rem;
+      color: $secondary-color;
+    }
+
+    p {
+      @include fonts('ExtraBold');
+      color: $blue-grey;
+    }
+  }
+}

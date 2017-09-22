@@ -1,0 +1,18 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  color: $text-color;
+  @include on-event {
+    text-decoration: none;
+  }
+}
