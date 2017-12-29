@@ -8,4 +8,9 @@ Use ``npm install``
 
 ### How to re-build CSS file? ###
 
-First, install gulp globally ``npm install -g gulp`` then ``gulp build-css``
+First, install gulp globally ``npm install -g gulp``
+then ``gulp build-css``
+
+### Sass watching ###
+
+on terminal just type ``gulp``

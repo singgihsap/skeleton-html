@@ -17,7 +17,6 @@
 // 4. Layout-related sections
 @import
   'layout/navbar',
-  'layout/sidebar',
   'layout/canvas',
   'layout/footer';
 
@@ -31,7 +30,6 @@
 
 // 6. Page-specific styles
 @import
-  'pages/home',
   'pages/page-content',
   'pages/content';
 

@@ -35,7 +35,7 @@
 
 		@include on-event {
 			background-color: transparent;
-			color: $faded-orange;
+			color: orange;
 		}
 	}
 	@include modifier('gradient-lg') {
@@ -68,34 +68,5 @@
 			background-image: linear-gradient(250deg, #fc6076, #ff9a44);
 			color: white;
 		}
-	}
-	@include modifier('red') {
-		background-color: $dusty-orange;
-		letter-spacing: .1rem;
-		border-radius: 5rem;
-		@include fonts('ExtraBold')
-		border: transparent;
-		color: $white;
-
-		@include on-event {
-			background-color: lighten($dusty-orange, 6%);
-			color: white;
-		}
-	}
-	@include modifier('green') {
-		background-color: $nasty-green;
-		letter-spacing: .1rem;
-		border-radius: 5rem;
-		@include fonts('ExtraBold')
-		border: transparent;
-		color: $white;
-
-		@include on-event {
-			background-color: lighten($nasty-green, 6%);
-			color: white;
-		}
-	}
-	span {
-		margin-right: 10px;
 	}
 }
