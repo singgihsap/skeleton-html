@@ -1,5 +1,5 @@
 body {
-  @include fonts("normal");
+  @include fonts("Open Sans");
   font-size: 14px;
   color: $text-color;
   text-rendering: optimizeLegibility;
