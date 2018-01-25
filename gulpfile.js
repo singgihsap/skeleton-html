@@ -1,7 +1,8 @@
 var gulp = require('gulp'),
-    gutil = require('gulp-util')
+    gutil = require('gulp-util'),
+    browserSync = require('browser-sync').create();
 
-sass = require('gulp-sass'),
+    sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     cleanCSS = require('gulp-clean-css'),
 
@@ -24,6 +25,9 @@ gulp.task('build-css', function () {
         .pipe(sass())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(output.stylesheets))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
 });
 
 // Minify CSS
@@ -33,7 +37,18 @@ gulp.task('minify-css', function () {
         .pipe(gulp.dest(output.stylesheets));
 });
 
+// BrowserSync
+gulp.task('browserSync', function() {
+    browserSync.init({
+        server: {
+            baseDir: './'
+        }
+    });
+});
+
 /* Watch these files for changes and run the task on update */
-gulp.task('watch', function () {
+gulp.task('watch', ['browserSync'], function () {
     gulp.watch(input.sass, ['build-css']);
+    gulp.watch('./*', browserSync.reload);
+    gulp.watch("./src/pages/*.html").on('change', browserSync.reload);
 });
