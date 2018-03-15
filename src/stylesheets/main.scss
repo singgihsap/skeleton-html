@@ -1,43 +1,26 @@
+// -----------------------------------------------------------------------------------
+// This file Global Imports site/application.
+// -----------------------------------------------------------------------------------
+
 @charset 'UTF-8';
 
-// 1. Configuration and helpers
-@import
-  'abstracts/variables',
-  'abstracts/mixins';
+// 1 - Configuration and helpers
+@import 'abstracts/index';
 
-// 2. Vendors
+// 2 - Base stuff
+@import 'base/index';
 
-// 3. Base stuff
-@import
-  'base/base',
-  'base/fonts',
-  'base/typography',
-  'base/helpers';
+// 3 - Layout
+@import 'layout/index';
 
-// 4. Layout-related sections
-@import
-  'layout/navbar',
-  'layout/canvas',
-  'layout/footer';
+// 4 - Components
+@import 'components/index';
 
-// 5. Components
-@import
-  'components/button',
-  'components/radio-button',
-  'components/cards',
-  'components/dropdown',
-  'components/inputs';
+// 5 - Section specific styles
+@import 'section/index';
 
-// 6. Page-specific styles
-@import
-  'pages/page-content',
-  'pages/content';
+// 6 - Pages specific styles
+@import 'pages/index';
 
-// 7. Page Responsive
-@import
-  'responsive/desktop',
-  'responsive/tablet',
-  'responsive/mobile',
-  'responsive/small-mobile';
-
-// 8. Themes
+// 7 - Vendors
+//@import 'vendors/index';
