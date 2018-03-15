@@ -29,11 +29,11 @@ This project also requires you to have global installations of [gulp](http://gul
 ``npm install``
 
 ### 4 Get started
-- For development watch ``browsersync`` automatic open browsers
+For development watch ``browsersync`` automatic open browsers
 just type on terminal :
 ``gulp``
 
-- For build folder ``dist`` in project
+For build folder ``dist`` in project
 1. ``gulp build-css``
 2. ``gulp clean-css``
 3. ``gulp build-dist``
