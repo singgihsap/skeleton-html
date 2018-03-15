@@ -1,0 +1,13 @@
+.content {
+  padding: 2rem 1rem;
+
+  @include element('header') {
+    h5 {
+      font-size: 1.8rem;
+    }
+  }
+
+  @include element('body') {
+    padding-top: 2rem;
+  }
+}
