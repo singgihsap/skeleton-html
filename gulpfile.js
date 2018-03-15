@@ -1,27 +1,33 @@
-var gulp = require('gulp'),
-    gutil = require('gulp-util'),
-    browserSync = require('browser-sync').create();
+// require modules
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var cleanCSS = require('gulp-clean-css');
+var sourcemaps = require('gulp-sourcemaps');
+var autoprefixer = require('gulp-autoprefixer');
+var browserSync = require('browser-sync').create();
 
-    sass = require('gulp-sass'),
-    sourcemaps = require('gulp-sourcemaps'),
-    cleanCSS = require('gulp-clean-css'),
+// target source scss
+var input = {
+    'sass': 'src/stylesheets/**/*.scss'
+};
 
-    input = {
-        'sass': 'src/stylesheets/**/*.scss'
-    },
-    output = {
-        'stylesheets': 'public/css'
-    };
+// output css
+var output = {
+    'stylesheets': 'src/assets/css'
+};
 
-/* run the watch task when gulp is called without arguments */
+// run the watch task when gulp is called without arguments
 gulp.task('default', ['watch']);
 
-
-/* compile scss files */
+// compile SCSS to CSS files
 gulp.task('build-css', function () {
     return gulp.src('src/stylesheets/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(sourcemaps.init())
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
         .pipe(sass())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(output.stylesheets))
@@ -30,16 +36,22 @@ gulp.task('build-css', function () {
         }))
 });
 
-// Minify CSS
-gulp.task('minify-css', function () {
-    return gulp.src('public/assets/stylesheets/*.css')
+// for build dist
+gulp.task("build-dist", ['build-css'], function () {
+    return gulp.src(['src/*.html', "src/assets/css/**", "src/assets/images/**", "src/assets/fonts/**", "src/assets/js/**"], {base: './src'})
+        .pipe(gulp.dest('dist'));
+});
+
+// clean CSS
+gulp.task('clean-css', function () {
+    return gulp.src('src/assets/css/*.css')
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest(output.stylesheets));
 });
 
 // BrowserSync
-gulp.task('browserSync', function() {
-    browserSync.init({
+gulp.task('browserSync', function () {
+    browserSync.init(['src/*.html', '*.html'], {
         server: {
             baseDir: './'
         }
@@ -49,6 +61,7 @@ gulp.task('browserSync', function() {
 /* Watch these files for changes and run the task on update */
 gulp.task('watch', ['browserSync'], function () {
     gulp.watch(input.sass, ['build-css']);
-    gulp.watch('./*', browserSync.reload);
-    gulp.watch("./src/pages/*.html").on('change', browserSync.reload);
+    gulp.watch('./*.html', browserSync.reload);
+    gulp.watch('*.html').on('change', browserSync.reload);
+    gulp.watch(['./src/*.html', '*.php']).on('change', browserSync.reload);
 });
