@@ -14,27 +14,48 @@ This project requires you to have a installation of [nodejs](https://nodejs.org/
 This project also requires you to have global installations of [gulp](http://gulpjs.com/).
 
 ### Install gulp globally
-``npm install -g gulp``
+```sh
+$ npm install -g gulp
+```
 
 
 # Quick Start
 
 ### 1 Clone this repo
-``git clone https://singgihsap@bitbucket.org/singgihsap/skeleton-html.git``
+```sh
+$ git clone https://singgihsap@bitbucket.org/singgihsap/skeleton-html.git
+```
 
 ### 2 Navigate into the repo directory
-``cd skeleton-html``
+```sh
+$ cd skeleton-html
+```
 
 ### 3 Install all node packages
-``npm install``
+```sh
+$ npm install
+```
 
 ### 4 Get started
 For development watch ``browsersync`` automatic open browsers
 just type on terminal :
-``gulp``
+```sh
+$ gulp
+```
 
 For build folder ``dist`` in project
-1. ``gulp build-css``
-2. ``gulp clean-css``
-3. ``gulp build-dist``
+Step 1
+```sh
+$ gulp build-css
+```
+
+Step 2
+```sh
+$ gulp clean-css
+```
+
+Step 3
+```sh
+$ gulp build-dist
+```
 
