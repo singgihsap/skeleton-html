@@ -44,6 +44,7 @@ $ gulp
 ```
 
 For build folder ``dist`` in project :
+
 **Step 1**
 ```sh
 $ gulp build-css
