@@ -9,31 +9,32 @@ A [Bootstrap](https://getbootstrap.com/) v4.0.0 boiler plate with [sass](http://
 ![gulp logo](https://user-images.githubusercontent.com/10498583/31125542-e2a78b88-a848-11e7-8ac5-c396f46e811f.jpg)
 ![browsersync logo](https://user-images.githubusercontent.com/10498583/31125540-e2a6eed0-a848-11e7-817a-69c5619f772a.jpg)
 
-## Requirements
+# Requirements
 This project requires you to have a installation of [nodejs](https://nodejs.org/en/) with [npm](https://www.npmjs.com/get-npm)
 This project also requires you to have global installations of [gulp](http://gulpjs.com/).
-```
-# Install gulp globally
-``npm install -g gulp``
-```
 
-## Quick Start
-```
-# 1 Clone this repo
+### Install gulp globally
+``npm install -g gulp``
+
+
+# Quick Start
+
+### 1 Clone this repo
 ``git clone https://singgihsap@bitbucket.org/singgihsap/skeleton-html.git``
 
-# 2 Navigate into the repo directory
+### 2 Navigate into the repo directory
 ``cd skeleton-html``
 
-# 3 Install all node packages
+### 3 Install all node packages
 ``npm install``
 
-# 4 Get started
-- For development watch browsersync automatic open browsers
-just type on terminal ``gulp``
+### 4 Get started
+- For development watch ``browsersync`` automatic open browsers
+just type on terminal :
+``gulp``
 
 - For build folder ``dist`` in project
 1. ``gulp build-css``
 2. ``gulp clean-css``
 3. ``gulp build-dist``
-```
+
