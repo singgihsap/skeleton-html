@@ -43,18 +43,18 @@ just type on terminal :
 $ gulp
 ```
 
-For build folder ``dist`` in project
-Step 1
+For build folder ``dist`` in project :
+**Step 1**
 ```sh
 $ gulp build-css
 ```
 
-Step 2
+**Step 2**
 ```sh
 $ gulp clean-css
 ```
 
-Step 3
+**Step 3**
 ```sh
 $ gulp build-dist
 ```
