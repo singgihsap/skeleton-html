@@ -36,27 +36,28 @@
 /// @access public
 /// @param {String} $element - Element's name
 @mixin element($element) {
-    &__#{$element} {
-        @content;
-    }
+  &__#{$element} {
+    @content;
+  }
 }
+
 /// @param {String} $modifier - Modifier's name
 @mixin modifier($modifier) {
-    &--#{$modifier} {
-        @content;
-    }
+  &--#{$modifier} {
+    @content;
+  }
 }
 
 /// Border Radius
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
-     -moz-border-radius: $radius;
-      -ms-border-radius: $radius;
-          border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
 }
 
 /// FLEXBOX
-@mixin flexbox(){
+@mixin flexbox() {
   .display-flex {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -64,7 +65,7 @@
   }
 }
 
-@mixin align-self(){
+@mixin align-self() {
   .align-self-center {
     -webkit-align-self: center;
     -ms-flex-item-align: center;
@@ -73,21 +74,21 @@
   }
 }
 
-@media (min-width : 760px) {
+@media (min-width: 760px) {
   @include flexbox();
 }
 
 @include align-self();
 
 /// MIXINS FOR MARGINS
-@mixin offset-margin($margin, $value){
+@mixin offset-margin($margin, $value) {
   margin-#{$margin}: $value !important;
 }
 
 @for $i from 0 through 20 {
   @each $margin in top, left, bottom, right {
 
-    .margin-#{$margin}-#{$i}{
+    .margin-#{$margin}-#{$i} {
       @include offset-margin($margin, 1rem * $i)
     }
 
@@ -95,14 +96,14 @@
 }
 
 /// MIXINS FOR PADDINGS
-@mixin offset-padding($padding, $value){
+@mixin offset-padding($padding, $value) {
   padding-#{$padding}: $value;
 }
 
 @for $i from 0 through 20 {
   @each $padding in top, left, bottom, right {
 
-    .pad-#{$padding}-#{$i}{
+    .pad-#{$padding}-#{$i} {
       @include offset-padding($padding, 1rem * $i)
     }
 
