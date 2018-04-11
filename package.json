@@ -9,8 +9,7 @@
   "author": "Singgih Saputro",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^4.0.0",
-    "font-awesome": "^4.7.0"
+    "bootstrap": "^4.0.0"
   },
   "devDependencies": {
     "browser-sync": "^2.23.6",

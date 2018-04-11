@@ -38,11 +38,6 @@
 @mixin element($element) {
     &__#{$element} {
         @content;
-        @mixin modifier($modifier) {
-          &--#{$modifier} {
-            @content;
-          }
-        }
     }
 }
 /// @param {String} $modifier - Modifier's name
