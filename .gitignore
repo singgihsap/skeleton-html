@@ -3,3 +3,4 @@ src/assets/css/
 dist/
 .DS_Store
 .idea/
+package-lock.json

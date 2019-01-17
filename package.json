@@ -4,7 +4,9 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node_modules/.bin/gulp build-css && gulp",
+    "build": "node_modules/.bin/gulp build-css && gulp clean-css && gulp build-dist"
   },
   "author": "Singgih Saputro",
   "license": "ISC",

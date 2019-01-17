@@ -2,7 +2,7 @@
 This repository contains pages and assets.
 
 # Bootstrap 4 boilerplate
-A [Bootstrap](https://getbootstrap.com/) v4.0.0 boiler plate with [sass](http://sass-lang.com/), autoprefixer, [Browsersync](https://www.browsersync.io/), hot reloading and sourcemaps all runned by [Gulp](https://gulpjs.com/)
+A [Bootstrap](https://getbootstrap.com/) v4.1.* boiler plate with [sass](http://sass-lang.com/), autoprefixer, [Browsersync](https://www.browsersync.io/), hot reloading and sourcemaps all runned by [Gulp](https://gulpjs.com/)
 
 ![bootstrap logo](https://user-images.githubusercontent.com/10498583/31125543-e2a88c2c-a848-11e7-87b0-d20ea38d41d0.jpg)
 ![sass logo](https://user-images.githubusercontent.com/10498583/31125541-e2a732e6-a848-11e7-959d-7d7b0c138124.jpg)
@@ -37,26 +37,16 @@ $ npm install
 ```
 
 ### 4 Get started
-For development watch ``browsersync`` automatic open browsers
+##### For development watch ``browsersync`` automatic open browsers
 just type on terminal :
 ```sh
-$ gulp
+$ npm start
 ```
 
-For build folder ``dist`` in project :
+##### For build folder ``dist`` in project :
 
-**Step 1**
+just type on terminal :
 ```sh
-$ gulp build-css
-```
-
-**Step 2**
-```sh
-$ gulp clean-css
-```
-
-**Step 3**
-```sh
-$ gulp build-dist
+$ npm run build
 ```
 
