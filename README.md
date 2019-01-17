@@ -21,22 +21,22 @@ $ npm install -g gulp
 
 # Quick Start
 
-### 1 Clone this repo
+### 1. Clone this repo
 ```sh
 $ git clone https://singgihsap@bitbucket.org/singgihsap/skeleton-html.git
 ```
 
-### 2 Navigate into the repo directory
+### 2. Navigate into the repo directory
 ```sh
 $ cd skeleton-html
 ```
 
-### 3 Install all node packages
+### 3. Install all node packages
 ```sh
 $ npm install
 ```
 
-### 4 Get started
+### 4. Get started
 ##### For development watch ``browsersync`` automatic open browsers
 just type on terminal :
 ```sh
