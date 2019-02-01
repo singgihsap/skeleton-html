@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node_modules/.bin/gulp build-css && gulp",
-    "build": "node_modules/.bin/gulp build-css && gulp clean-css && gulp build-dist"
+    "build": "node_modules/.bin/gulp build-css && gulp minify-css && gulp build-dist"
   },
   "author": "Singgih Saputro",
   "license": "ISC",
@@ -17,7 +17,7 @@
     "browser-sync": "^2.23.6",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
-    "gulp-clean-css": "^3.9.2",
+    "gulp-clean-css": "^4.0.0",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.4"
   }

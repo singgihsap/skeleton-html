@@ -112,7 +112,7 @@
 
 // MIXIN FONTS
 @mixin fonts($fonts) {
-  font-family: $fonts, sans-serif;
+  font-family: $fonts, sans-serif !important;
 }
 
 // MIXIN TRANSITION
