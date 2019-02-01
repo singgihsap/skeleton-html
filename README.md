@@ -23,12 +23,12 @@ $ npm install -g gulp
 
 ### 1. Clone this repo
 ```sh
-$ git clone https://singgihsap@bitbucket.org/singgihsap/skeleton-html.git
+$ git clone [this repo]
 ```
 
 ### 2. Navigate into the repo directory
 ```sh
-$ cd skeleton-html
+$ cd [folder]
 ```
 
 ### 3. Install all node packages
