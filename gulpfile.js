@@ -13,7 +13,8 @@ var input = {
 
 // output css
 var output = {
-  'stylesheets': 'src/assets/css'
+  'stylesheets': 'src/assets/css',
+  'dist': 'dist/assets/css'
 };
 
 // run the watch task when gulp is called without arguments
@@ -37,7 +38,7 @@ gulp.task('build-css', function () {
 
 // for build dist
 gulp.task("build-dist", ['build-css'], function () {
-  return gulp.src(['src/*.html', "src/assets/css/**", "src/assets/images/**", "src/assets/fonts/**", "src/assets/js/**"], {base: './src'})
+  return gulp.src(['src/*.html', "src/assets/css/**", "src/assets/images/**", "src/assets/fonts/**", "src/assets/js/**", "src/assets/vendor/**"], { base: './src' })
   .pipe(gulp.dest('dist'));
 });
 
@@ -47,7 +48,7 @@ gulp.task('minify-css', () => {
   return gulp.src('src/assets/css/*.css')
   .pipe(cleanCSS())
   //I define the destination of the minified files with the method dest
-  .pipe(gulp.dest(output.stylesheets));
+  .pipe(gulp.dest(output.dist));
 });
 
 // BrowserSync
