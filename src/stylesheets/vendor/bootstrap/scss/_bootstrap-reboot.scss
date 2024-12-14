@@ -6,11 +6,14 @@
  * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
  */
 
+ @import "../../../../../node_modules/bootstrap/scss/mixins/banner";
+@include bsBanner(Reboot);
+
 @import "../../../../../node_modules/bootstrap/scss/functions";
 @import "../../../../../node_modules/bootstrap/scss/variables";
-// Prevent the usage of custom properties since we don't add them to `:root` in reboot
-$font-family-base: $font-family-sans-serif; // stylelint-disable-line scss/dollar-variable-default
-$font-family-code: $font-family-monospace; // stylelint-disable-line scss/dollar-variable-default
+@import "../../../../../node_modules/bootstrap/scss/variables-dark";
+@import "../../../../../node_modules/bootstrap/scss/maps";
 @import "../../../../../node_modules/bootstrap/scss/mixins";
+@import "../../../../../node_modules/bootstrap/scss/root";
 @import "../../../../../node_modules/bootstrap/scss/reboot";
 
