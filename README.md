@@ -33,7 +33,7 @@ $ cd [folder]
 ```
 
 ### 3. Install all node packages
-use node version ``v10.24.1``
+Use node version ``v10.24.1``
 next start for install just type on terminal :
 ```sh
 $ npm install
@@ -41,14 +41,14 @@ $ npm install
 
 ### 4. Get started
 ##### For development watch ``browsersync`` automatic open browsers
-just type on terminal :
+Just type on terminal :
 ```sh
 $ npm start
 ```
 
 ##### For build folder ``dist`` in project :
 
-just type on terminal :
+Just type on terminal :
 ```sh
 $ npm run build
 ```
