@@ -1,11 +1,11 @@
 /*!
- * Bootstrap Grid v5.1.0 (https://getbootstrap.com/)
+ * Bootstrap Grid v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
- @import "../../../../../node_modules/bootstrap/scss/mixins/banner";
+@import "../../../../../node_modules/bootstrap/scss/mixins/banner";
 @include bsBanner(Grid);
 
 $include-column-box-sizing: true !default;
@@ -62,7 +62,7 @@ $utilities: map-get-multiple(
     "padding-top",
     "padding-end",
     "padding-bottom",
-    "padding-start",
+    "padding-start"
   )
 );
 
