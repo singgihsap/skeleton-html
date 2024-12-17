@@ -33,6 +33,8 @@ $ cd [folder]
 ```
 
 ### 3. Install all node packages
+use node version ``v10.24.1``
+next start for install just type on terminal :
 ```sh
 $ npm install
 ```
