@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node_modules/.bin/gulp build-css && gulp",
-    "build": "node_modules/.bin/gulp build-css && gulp minify-css && gulp build-dist"
+    "build": "node_modules/.bin/gulp build-css && gulp build-dist && gulp minify-css"
   },
   "author": "Singgih Saputro",
   "email": "singgihsap@gmail.com",
